@@ -65,5 +65,79 @@ const computerSelection = computerPlay();
 playRound(playerSelection, computerSelection);
 */
 
+const rock = document.getElementById('rock');
+const paper = document.getElementById('paper');
+const scissors = document.getElementById('scissors');
+const output = document.getElementById('output');
+const left = document.getElementById('left');
+const right = document.getElementById('right');
 
-// Pseudo - code
+rock.addEventListener('click', () =>{
+    left.innerHTML = '🪨';
+    playerSelection = 'rock'
+});
+
+paper.addEventListener('click', () =>{
+    left.innerHTML = '🧻';
+    playerSelection = 'paper'
+});
+
+scissors.addEventListener('click', () =>{
+    left.innerHTML = '✂️';
+    playerSelection = 'scissors'
+});
+
+
+
+function computerPlay(){
+    let a = ['rock', 'paper', 'scissors'];
+    let b = a[Math.floor(Math.random() * a.length)];
+    return b;
+}
+computerPlay();
+
+function playRound(playerSelection, computerSelection){
+    let won = 'You Won! Lucky Ass!';
+    let lose = 'You Lose! ugly bad ass!';
+    let tie = 'Try again! Tie!';
+    if(playerSelection == 'Rock' && computerSelection == 'Rock'){
+        output.innerHTML = `NUUUU`;
+        return `${tie}`
+    }else if(playerSelection == 'Rock' && computerSelection == 'Paper'){
+        output.innerHTML = `${lose}`;
+        return `${lose}`;
+    }else if(playerSelection == 'Rock' && computerSelection == 'Scissors'){
+        output.innerHTML = `${won}`;
+        return `${won}`;
+    }else if(playerSelection == 'Paper' && computerSelection == 'Rock'){
+        output.innerHTML = `${won}`;
+        return `${won}`;
+    }else if(playerSelection == 'Paper' && computerSelection == 'Paper'){
+        output.innerHTML = `${tie}`;
+        return `${tie}`;
+    }else if(playerSelection == 'Paper' && computerSelection == 'Scissors'){
+        output.innerHTML = `${lose}`;
+        return `${lose}`
+    }else if(playerSelection == 'Scissors' && computerSelection == 'Rock'){
+        output.innerHTML = `${lose}`
+        return `${lose}`;
+    }else if(playerSelection == 'Scissors' && computerSelection == 'Paper'){
+        output.innerHTML = `${won}`
+        return `${won}`;
+    }else if(playerSelection == 'Scissors' && computerSelection == 'Scissors'){
+        output.innerHTML = '${tie}'
+        return `${tie}`;
+    }
+}
+let playerSelection;
+const computerSelection = computerPlay();
+
+if(computerSelection == 'rock'){
+    right.innerHTML = '🪨'
+}else if(computerSelection == 'paper'){
+    right.innerHTML = '🧻'
+}else{
+    right.innerHTML = '✂️'
+}
+
+playRound(playerSelection, computerSelection);
