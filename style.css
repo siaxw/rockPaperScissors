@@ -13,7 +13,6 @@ body {
 
 h1 {
 	text-align: center;
-	border: 1px solid white;
 	color: white;
 	padding: 20px;
 }
@@ -27,6 +26,15 @@ h1 {
 h3 {
 	text-align: center;
 	margin: 10px;
+}
+
+.container__score {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 200px;
+	font-size: 50px;
+	padding: -20px;
 }
 
 .left-right {
@@ -59,6 +67,7 @@ h3 {
 	justify-content: center;
 	align-items: center;
 	gap: 32px;
+	user-select: none;
 }
 
 .container__btn button {
@@ -86,6 +95,6 @@ h3 {
 
 footer h4 {
 	text-align: center;
-	margin-top: 350px;
+	margin-top: 200px;
 	color: white;
 }
