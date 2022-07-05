@@ -16,68 +16,49 @@ function computerPlay(){
     return b;
 }
 
-/*
 function playRound(playerSelection, computerSelection){
     let tie = 'Tie';
     let win = 'Win';
     let lose = 'Lose';
-    let i = 0;
-    let j = 0;
-    for(;i < 1; i++){
         if(playerSelection == 'rock' && computerSelection == 'rock'){
             score.innerHTML = `${tie}`;
             right.innerHTML = '🪨';
-            return console.log('Tie');
+            return tie;
         }else if(playerSelection == 'rock' && computerSelection == 'paper'){
-            j++;
-            score.innerHTML = `${lose} ${j}`;
-            console.log('Lose')
+            score.innerHTML = `${lose}`;
             right.innerHTML = '🗞'
-            return console.log(j);
+            return console.log(lose);
         }else if(playerSelection == 'rock' && computerSelection == 'scissors'){
-            i++;
-            score.innerHTML = `${win} ${i}`;
-            console.log('Win');
+            score.innerHTML = `${win}`;
             right.innerHTML = '✂️';
-            return console.log(i);
+            return console.log(win);
         }else if(playerSelection == 'paper' && computerSelection == 'rock'){
-            i++;
-            score.innerHTML = `${win} ${i}`;
-            console.log('Win');
+            score.innerHTML = `${win}`;
             right.innerHTML = '🪨';
-            return console.log(i)
+            return console.log(win)
         }else if(playerSelection == 'paper' && computerSelection == 'paper'){
             score.innerHTML = `${tie}`;
-            console.log('Tie');
             right.innerHTML = '🗞';
-            return console.log(i);
+            return console.log(tie);
         }else if(playerSelection == 'paper' && computerSelection == 'scissors'){
-            j++;
-            score.innerHTML = `${lose} ${j}`;
-            console.log('Lose');
+            score.innerHTML = `${lose}`;
             right.innerHTML = '✂️';
-            return console.log(j);
+            return console.log(lose);
         }else if(playerSelection == 'scissors' && computerSelection == 'rock'){
-            j++;
-            score.innerHTML = `${lose} ${j}`;
-            console.log('Lose');
+            score.innerHTML = `${lose}`;
             right.innerHTML = '🪨';
-            return console.log(j);
+            return console.log(lose);
         }else if(playerSelection == 'scissors' && computerSelection == 'paper'){
-            i++;
-            score.innerHTML = `${win} ${i}`;
-            console.log('Win');
+            score.innerHTML = `${win}`;
             right.innerHTML = '🗞';
-            return console.log(i);
+            return console.log(win);
         }else if(playerSelection == 'scissors' && computerSelection == 'scissors'){
             score.innerHTML = `${tie}`;
-            console.log('Tie');
             right.innerHTML = '✂️';
-            return console.log(12);
+            return console.log(tie);
         }
     }
-}
-*/
+
 let playerSelection = 'rock';
 const computerSelection = computerPlay();
 
@@ -95,7 +76,8 @@ paper.addEventListener('click', () =>{
 
 scissors.addEventListener('click', () =>{
     left.innerHTML = '✂️';
-    playerSelection = 'scissors'
+    playerSelection = 'scissors';
     playRound(playerSelection, computerSelection);
 });
+
 
