@@ -163,13 +163,16 @@ function playRound(){
         computerSelection = computerPlay();
         if(computerSelection == 'rock'){
             right.innerHTML = '🪨';
-            return score.innerHTML = tie;
+            score.innerHTML = tie;
+            return tie;
         }else if(computerSelection == 'paper'){
             right.innerHTML = '🗞';
-            return score.innerHTML = lose;
+            score.innerHTML = lose;
+            return lose;
         }else if(computerSelection == 'scissors'){
             right.innerHTML = '✂️';
-            return score.innerHTML = win;
+            score.innerHTML = win;
+            return win;
         }
     });
 
@@ -179,13 +182,16 @@ function playRound(){
         computerSelection = computerPlay();
         if(computerSelection == 'rock'){
             right.innerHTML = '🪨';
-            return score.innerHTML = win;
+            score.innerHTML = win;
+            return win;
         }else if(computerSelection == 'paper'){
             right.innerHTML = '🗞';
-            return score.innerHTML = tie;
+            score.innerHTML = tie;
+            return tie;
         }else if(computerSelection == 'scissors'){
             right.innerHTML = '✂️';
-            return score.innerHTML = lose; 
+            score.innerHTML = lose; 
+            return lose;
         }
     });
 
@@ -195,57 +201,33 @@ function playRound(){
         computerSelection = computerPlay();
         if(computerSelection == 'rock'){
             right.innerHTML = '🪨';
-            return score.innerHTML = lose;
+            score.innerHTML = lose;
+            return lose;
         }else if(computerSelection == 'paper'){
             right.innerHTML = '🗞';
-            return score.innerHTML = win;
+            score.innerHTML = win;
+            return win;
         }else if(computerSelection == 'scissors'){
             right.innerHTML = '✂️';
-            return score.innerHTML = tie;
+            score.innerHTML = tie;
+            return tie;
         }
     });
-/*
-    if(playerSelection == 'rock' && computerSelection == 'rock'){
-        score.innerHTML = `${tie}`;
-        right.innerHTML = '🪨';
-        return console.log(tie);
-    }else if(playerSelection == 'rock' && computerSelection == 'paper'){
-        score.innerHTML = `${lose}`;
-        right.innerHTML = '🗞'
-        return console.log(lose);
-    }else if(playerSelection == 'rock' && computerSelection == 'scissors'){
-        score.innerHTML = `${win}`;
-        right.innerHTML = '✂️';
-        return console.log(win);
-    }else if(playerSelection == 'paper' && computerSelection == 'rock'){
-        score.innerHTML = `${win}`;
-        right.innerHTML = '🪨';
-        return console.log(win)
-    }else if(playerSelection == 'paper' && computerSelection == 'paper'){
-        score.innerHTML = `${tie}`;
-        right.innerHTML = '🗞';
-        return console.log(tie);
-    }else if(playerSelection == 'paper' && computerSelection == 'scissors'){
-        score.innerHTML = `${lose}`;
-        right.innerHTML = '✂️';
-        return console.log(lose);
-    }else if(playerSelection == 'scissors' && computerSelection == 'rock'){
-        score.innerHTML = `${lose}`;
-        right.innerHTML = '🪨';
-        return console.log(lose);
-    }else if(playerSelection == 'scissors' && computerSelection == 'paper'){
-        score.innerHTML = `${win}`;
-        right.innerHTML = '🗞';
-        return console.log(win);
-    }else if(playerSelection == 'scissors' && computerSelection == 'scissors'){
-        score.innerHTML = `${tie}`;
-        right.innerHTML = '✂️';
-        return console.log(tie);
-    }
-*/
 }
 
 let playerSelection;
 let computerSelection = computerPlay();
 
-playRound();
+let playerScore = 0;
+let computerScore = 0;
+score1.innerHTML = playerScore;
+score2.innerHTML = computerScore;
+
+function game(){
+    for(let i = 0; i < 5; i++){
+
+    }
+};
+
+
+game();
