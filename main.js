@@ -131,6 +131,7 @@ scissors.addEventListener('click', () =>{
 });
 */
 
+/*
 const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
@@ -142,21 +143,25 @@ const score1 = document.getElementById('score1');
 const score2 = document.getElementById('score2');
 
 function computerPlay(){
-    let a = [
-        "rock",
-        "paper",
-        "scissors"
+    let arrOfChoices = [
+        'rock',
+        'paper',
+        'scissors'
     ];
 
-    let b = a[Math.floor(Math.random() * a.length)];
-    return b;
+    let randomChoice = arrOfChoices[Math.floor(Math.random() * 0.5 * arrOfChoices.length)];
+
+    return randomChoice;
 }
 
-function playRound(){
-    let win = 'Win';
-    let lose = 'Lose';
-    let tie = 'Tie';
 
+
+function playRound(){
+    let win = 'Win! Lucky bastard!';
+    let lose = 'Lose! Fuck you stupid bad ass';
+    let tie = 'Tie! Are u fucking kidding me?';
+
+    // Rock
     rock.addEventListener('click', () =>{
         left.innerHTML = '🪨';
         playerSelection = 'rock';
@@ -176,6 +181,7 @@ function playRound(){
         }
     });
 
+    // Paper
     paper.addEventListener('click', () =>{
         left.innerHTML = '🗞';
         playerSelection = 'paper';
@@ -195,6 +201,7 @@ function playRound(){
         }
     });
 
+    // Scissors
     scissors.addEventListener('click', () =>{
         left.innerHTML = '✂️';
         playerSelection = 'scissors';
@@ -215,19 +222,17 @@ function playRound(){
     });
 }
 
-let playerSelection;
-let computerSelection = computerPlay();
 
-let playerScore = 0;
-let computerScore = 0;
-score1.innerHTML = playerScore;
-score2.innerHTML = computerScore;
+let playerSelection = 'rock';
+
+
 
 function game(){
     for(let i = 0; i < 5; i++){
-
+        const computerSelection = computerPlay();
+        console.log(playRound(playerSelection, computerSelection))
     }
-};
-
+}
 
 game();
+*/
