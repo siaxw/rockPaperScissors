@@ -1,4 +1,3 @@
-const btn = document.getElementById('btn');
 let playerScore = 0;
 let computerScore = 0;
 
