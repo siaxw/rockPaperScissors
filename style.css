@@ -62,7 +62,6 @@ body {
 .container__weapons {
 	margin-top: 70px;
 	display: flex;
-	font-size: 70px;
 	justify-content: center;
 	align-items: center;
 	gap: 90px;
@@ -76,4 +75,10 @@ body {
 	border-radius: 10px;
 	border: 1px solid rgba(255, 255, 255, 0.18);
 	padding: 25px;
+	font-size: 90px;
+	transition: 0.2s;
+}
+
+.container__weapons .weapon:active {
+	padding: 15px;
 }
